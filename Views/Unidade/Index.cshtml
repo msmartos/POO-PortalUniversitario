@@ -1,0 +1,23 @@
+﻿@model List<Unidade>
+
+<table class="table table-hover">
+
+    @foreach (var u in Model)
+    {
+    <tr>
+        <td>@u.IdUnidade</td>
+        <td>@u.Nome</td>
+        <td>@u.Endereco</td>
+        <td>@u.Telefone</td>
+        <td>@u.CNPJ</td>
+        <td>@u.Site</td>
+        <td>
+            <a class="btn btn-sm btn-danger" href="/unidade/delete/@u.IdUnidade">Apagar</a>
+            <a class="btn btn-sm btn-warning" href="/unidade/update/@u.IdUnidade">Editar</a>
+        </td>
+    </tr>
+    }
+
+</table>
+
+<a class="btn btn-primary" href="/unidade/create">Adicionar</a>
